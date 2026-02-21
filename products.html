@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>products</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: white;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.nav-links a {
+  margin: 0 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.icons i {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  height: 400px; 
+  background-image: url("images/p1.jpg");
+  background-size: cover;     
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  color: black;
+}
+
+    
+
+.hero-content h1 {
+  font-size: 40px;
+}
+
+.filters {
+  padding: 40px 60px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.filters button {
+  margin-left: 10px;
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.color-dropdown {
+  position: absolute;
+  top: 80px;
+  left: 150px;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: none;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.blue { background: blue; }
+.grey { background: grey; }
+.red { background: red; }
+.yellow { background: gold; }
+
+
+
+.products{
+  padding:0 80px 80px;
+  width: 100%;
+  background: #f5f5f5;
+}
+
+.products-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+
+.product-card{
+  background: #f5f5f5;
+  border: 1px solid whitesmoke;
+  width: 100%;
+  padding:20px;
+  transition:0.3s;
+}
+
+.product-card:hover{
+  transform:translateY(-5px);
+}
+
+.product-card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+}
+
+.product-info{
+  margin-top:15px;
+  text-align: left;
+}
+.product-info button{
+    background: #E3A018;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.product-info h4{
+  font-size:14px;
+  margin-bottom:6px;
+  font-weight:500;
+}
+
+.product-info p{
+  font-size:14px;
+  margin-bottom:8px;
+}
+
+.colors{
+  display:flex;
+  gap:6px;
+padding-left: 20px;
+  
+}
+
+.colors span{
+    
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.blue{background:#0d3b66;}
+.grey{background:#999;}
+.orange{background:#c67c4e;}
+.brown{background:#6b4f4f;}
+
+
+
+.pagination{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+  gap:20px;
+}
+
+.pagination a{
+  text-decoration:none;
+  color:#111;
+  font-size:14px;
+  width:36px;
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  transition:0.3s;
+}
+
+.pagination a:hover{
+  background:#e5e5e5;
+}
+
+.pagination .active{
+  background:#000;
+  color:#fff;
+}
+
+
+
+  </style>
+</head>
+<body>
+
+
+<header class="header">
+    <div class="logo">MONTI shop</div>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+    <div class="header-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt="cart"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt="search"></a>
+      </nav>
+    </div>
+  </header>
+
+
+<section class="hero">
+    
+  <div class="hero-content">
+    <h1>Shop</h1>
+    <p>Home > Shop</p>
+  </div>
+</section>
+
+
+<section class="filters">
+  <div class="left-filters">
+    <span>Filter by</span>
+    <button>Categories</button>
+    <button id="colorBtn">Color</button>
+    <button>Size</button>
+    <button>Brand</button>
+    <button>Price</button>
+  </div>
+
+  <div class="right-filters">
+    <select>
+      <option>Default Sorting</option>
+      <option>Price Low to High</option>
+      <option>Price High to Low</option>
+    </select>
+  </div>
+
+  <!-- Color Dropdown -->
+  <div class="color-dropdown" id="colorDropdown">
+    <h4>Colors</h4>
+    <div><span class="dot blue"></span> Blue</div>
+    <div><span class="dot grey"></span> Grey</div>
+    <div><span class="dot red"></span> Red</div>
+    <div><span class="dot yellow"></span> Yellow</div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="products-grid">
+
+    
+    <div class="product-card">
+      <img src="images/fashion 3.jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    
+    <div class="product-card">
+      <img src="images/2025 Best outfits for cold season by….jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/Good quality runs a little snall tho so size up 2.jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/IT Girl 2025 Summer Fashion Casual Summer Outfit….jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/Look sharp on the go with this modern grey….jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/Men's Fall Capsule Wardrobe + 20 Outfit Ideas….jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/p1.jpg">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="images/p2.webp">
+      <div class="product-info">
+        <h4>Lace Shirt Cut II</h4>
+        <p>$16.00</p>
+        
+        <div class="colors">
+          <span class="blue"></span>
+          <span class="grey"></span>
+          <span class="orange"></span>
+        </div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+
+  </div>
+
+  
+  <div class="pagination">
+    <a href="#" class="active">1</a>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">4</a>
+    <a href="#">→</a>
+  </div>
+</section>
+
+
+<footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3 class="logo second">MONTI shop</h3>
+        <p><strong>ADDRESS:</strong> 28 White tower Street, NIGERIA</p>
+        <p><strong>TELEPHONE:</strong> +234 987 654 3210</p>
+        <p><strong>EMAIL:</strong> monicaehonwa@gmail.com</p>
+      </div>
+
+      <div class="footer-box">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>ACCOUNT</h4>
+        <ul>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="checkout.html"> Checkout</a></li>
+          <li><a href="signin.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="products.html">Shopping</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>NEWS LETTER</h4>
+        <p>Subscribe by our newsletter and get update protidin.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Mail">
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 All Rights Reserved By Montishop
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

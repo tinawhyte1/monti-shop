@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    *{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#f5f5f5;
+  color:#333;
+}
+
+/* Top bar */
+.top-bar{
+  background:#5a2200;
+  color:#fff;
+  display:flex;
+  justify-content:space-between;
+  padding:10px 60px;
+  font-size:14px;
+}
+.top-bar a{color:#ffd4b2;text-decoration:underline;}
+
+/* Navbar */
+.navbar{
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 60px;
+  border-bottom:1px solid #eee;
+}
+.navbar nav a{
+  margin:0 10px;
+  text-decoration:none;
+  color:#333;
+  font-size:14px;
+}
+.navbar img{
+  width: 15px;
+}
+
+/* Header */
+.page-header{
+  text-align:center;
+  padding:60px 20px;
+  background:#fafafa;
+}
+.page-header h1{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+/* Cart layout */
+.cart-container{
+  display:flex;
+  gap:40px;
+  padding:60px;
+}
+
+.cart-left{
+  flex:2;
+}
+
+.cart-right{
+  flex:1;
+  background:#fff;
+  padding:30px;
+  border:1px solid #eee;
+}
+
+.cart-header{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  background:#f3c46b;
+  padding:15px;
+  font-weight:600;
+}
+
+.cart-item{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr 1fr;
+  align-items:center;
+  padding:20px 0;
+  border-bottom:1px solid #eee;
+}
+
+.product-info{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+.product-info img{
+  width:70px;
+  height:90px;
+  object-fit:cover;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+}
+.qty button{
+  width:30px;
+  height:30px;
+  border:1px solid #ccc;
+  background:#fff;
+}
+.qty input{
+  width:40px;
+  text-align:center;
+  border:1px solid #ccc;
+}
+
+/* Coupon */
+.coupon{
+  margin-top:20px;
+  display:flex;
+  gap:15px;
+  align-items:center;
+}
+.coupon input{
+  padding:10px;
+  border:1px solid #ccc;
+}
+.coupon button{
+  background:#5a2200;
+  color:#fff;
+  padding:10px 20px;
+  border:none;
+}
+
+/* Summary */
+.summary-line{
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+}
+.total{
+  font-weight:700;
+  font-size:18px;
+}
+.checkout-btn{
+  width:100%;
+  padding:15px;
+  margin-top:20px;
+  background:#5a2200;
+  color:#fff;
+  border:none;
+}
+
+/* Features */
+.features{
+  display:flex;
+  justify-content:space-around;
+  padding:50px 60px;
+  background:#fff;
+  border-top:1px solid #eee;
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+  <div>Support (406) 555-0120</div>
+  <div>Sign up and GET 25% OFF for your first order. <a href="#">Sign up now</a></div>
+  <div>✕</div>
+</div>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">Monti Shop.</div>
+  <nav>
+    <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt="cart"></a>
+ <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt="search"></a>
+  </nav>
+  <div>
+ 
+  
+</header>
+
+<!-- Page Header -->
+<section class="page-header">
+  <h1>Shopping Cart</h1>
+  <p>Home / Shopping Cart</p>
+</section>
+
+<!-- Cart Section -->
+<section class="cart-container">
+
+  <div class="cart-left">
+
+    <div class="cart-header">
+      <span>Product</span>
+      <span>Price</span>
+      <span>Quantity</span>
+      <span>Subtotal</span>
+    </div>
+
+    <!-- Item -->
+    <div class="cart-item">
+      <div class="product-info">
+        <span class="remove">✕</span>
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="">
+        <div>
+          <h4>Trendy Brown Coat</h4>
+          <p>Color: Brown | Size: XXL</p>
+        </div>
+      </div>
+      <span>$75.00</span>
+      <div class="qty">
+        <button>-</button>
+        <input type="text" value="4">
+        <button>+</button>
+      </div>
+      <span>$300.00</span>
+    </div>
+
+  
+    <div class="cart-item">
+      <div class="product-info">
+        <span class="remove">✕</span>
+        <img src="https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe" alt="">
+        <div>
+          <h4>Classy Light Coat</h4>
+          <p>Color: Cream | Size: XXL</p>
+        </div>
+      </div>
+      <span>$165.00</span>
+      <div class="qty">
+        <button>-</button>
+        <input type="text" value="1">
+        <button>+</button>
+      </div>
+      <span>$165.00</span>
+    </div>
+
+    <div class="cart-item">
+      <div class="product-info">
+        <span class="remove">✕</span>
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="">
+        <div>
+          <h4>Light Brown Sweater</h4>
+          <p>Color: Light Brown | Size: S</p>
+        </div>
+      </div>
+      <span>$63.00</span>
+      <div class="qty">
+        <button>-</button>
+        <input type="text" value="1">
+        <button>+</button>
+      </div>
+      <span>$63.00</span>
+    </div>
+
+    <div class="cart-item">
+      <div class="product-info">
+        <span class="remove">✕</span>
+        <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c" alt="">
+        <div>
+          <h4>Modern Brown Dress</h4>
+          <p>Color: Brown | Size: S</p>
+        </div>
+      </div>
+      <span>$90.00</span>
+      <div class="qty">
+        <button>-</button>
+        <input type="text" value="2">
+        <button>+</button>
+      </div>
+      <span>$180.00</span>
+    </div>
+
+    <!-- Coupon -->
+    <div class="coupon">
+      <input type="text" placeholder="Coupon Code">
+      <button>Apply Coupon</button>
+      <a href="#">Clear Shopping Cart</a>
+    </div>
+
+  </div>
+
+  <!-- Order Summary -->
+  <aside class="cart-right">
+    <h3>Order Summary</h3>
+    <div class="summary-line"><span>Items</span><span>8</span></div>
+    <div class="summary-line"><span>Sub Total</span><span>$708.00</span></div>
+    <div class="summary-line"><span>Shipping</span><span>$0.00</span></div>
+    <div class="summary-line"><span>Taxes</span><span>$0.00</span></div>
+    <div class="summary-line"><span>Coupon Discount</span><span>- $100.00</span></div>
+    <hr>
+    <div class="summary-line total"><span>Total</span><span>$633.00</span></div>
+    <button class="checkout-btn">Proceed to Checkout</button>
+  </aside>
+
+</section>
+
+<!-- Features -->
+<section class="features">
+  <div>
+    <h4>Free Shipping</h4>
+    <p>Free shipping for order above $180</p>
+  </div>
+  <div>
+    <h4>Flexible Payment</h4>
+    <p>Multiple secure payment options</p>
+  </div>
+  <div>
+    <h4>24x7 Support</h4>
+    <p>We support online all days.</p>
+  </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3 class="logo second">MONTI shop</h3>
+        <p><strong>ADDRESS:</strong> 28 White tower Street, NIGERIA</p>
+        <p><strong>TELEPHONE:</strong> +234 987 654 3210</p>
+        <p><strong>EMAIL:</strong> monicaehonwa@gmail.com</p>
+      </div>
+
+      <div class="footer-box">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>ACCOUNT</h4>
+        <ul>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="checkout.html"> Checkout</a></li>
+          <li><a href="signin.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="products.html">Shopping</a></li>
+
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h4>NEWS LETTER</h4>
+        <p>Subscribe by our newsletter and get update protidin.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Mail">
+          <button>Subscribe</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 All Rights Reserved By Montishop
+    </div>
+  </footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

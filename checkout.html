@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
+}
+.navbar img{
+  width: 15px;
+}
+/* CHECKOUT LAYOUT */
+.checkout-container {
+  display: flex;
+  padding: 60px;
+  gap: 60px;
+  background: #fff;
+}
+
+.left-section {
+  flex: 2;
+}
+
+.right-section {
+  flex: 1;
+  background: #fafafa;
+  padding: 30px;
+}
+
+.checkout-title {
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+h3 {
+  margin: 30px 0 15px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+  background: transparent;
+}
+
+.delivery-option,
+.summary div {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.place-order {
+  margin-top: 30px;
+  padding: 15px;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* PRODUCTS */
+.product {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  align-items: center;
+}
+
+.product img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+}
+
+.product span {
+  margin-left: auto;
+}
+
+.summary {
+  margin-top: 30px;
+}
+
+.total {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+/* PROMO */
+.promo {
+  display: flex;
+  justify-content: space-between;
+  padding: 80px 60px;
+  background: #0d1117;
+  color: #fff;
+}
+
+.promo-right h1 {
+  font-size: 70px;
+  font-weight: 900;
+  text-align: right;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  background: #0d1117;
+  color: #aaa;
+}
+
+.footer h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer input {
+  background: transparent;
+  border: 1px solid #444;
+  padding: 10px;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .promo {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .promo-right h1 {
+    text-align: left;
+    font-size: 40px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">Monti shop</div>
+    <nav>
+      <a href="#">MEN</a>
+      <a href="#">WOMEN</a>
+      <a href="index.html">HOME</a>
+      <a href="#">ABOUT</a>
+      <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt="cart"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt="search"></a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="checkout-container">
+
+    <div class="left-section">
+      <h1 class="checkout-title">CHECKOUT</h1>
+
+      <h3>Information</h3>
+
+      <div class="form-grid">
+        <input type="text" placeholder="First name">
+        <input type="text" placeholder="Last name">
+        <input type="text" placeholder="Phone number">
+        <input type="email" placeholder="Email">
+      </div>
+
+      <h4>Shipping Information</h4>
+
+      <div class="form-grid">
+        <input type="text" placeholder="Country / Region">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Address">
+        <input type="text" placeholder="Zip / Postal code">
+      </div>
+
+      <h3>Delivery</h3>
+
+      <div class="delivery-option">
+        <label><input type="radio" name="delivery" checked> Standard Delivery</label>
+        <span>Free</span>
+      </div>
+
+      <div class="delivery-option">
+        <label><input type="radio" name="delivery"> Express Shipping</label>
+        <span>$50.00</span>
+      </div>
+
+      <h3>Payment</h3>
+
+      <div class="payment-method">
+        <label><input type="radio" name="payment" checked> Credit Card</label>
+      </div>
+
+      <div class="form-grid">
+        <input type="text" placeholder="Card number">
+        <input type="text" placeholder="Cardholder name">
+        <input type="text" placeholder="Expiration date (MM/YY)">
+        <input type="text" placeholder="CVV">
+      </div>
+
+      <button class="place-order">PAY AND PLACE ORDER</button>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <aside class="right-section">
+      <h3>Shopping Bag (3)</h3>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="">
+        <div>
+          <h4>Top Coat Amon</h4>
+          <p>Size: M<br>Color: Black<br>Quantity: 1</p>
+        </div>
+        <span>$1,320.00</span>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38" alt="">
+        <div>
+          <h4>Dress Bastet</h4>
+          <p>Size: S<br>Color: Black<br>Quantity: 1</p>
+        </div>
+        <span>$910.00</span>
+      </div>
+
+      <div class="product">
+        <img src="https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe" alt="">
+        <div>
+          <h4>Robe Niniti</h4>
+          <p>Size: M<br>Color: Black<br>Quantity: 1</p>
+        </div>
+        <span>$1,530.00</span>
+      </div>
+
+      <div class="summary">
+        <div><span>Shipping</span><span>Free</span></div>
+        <div><span>Discount</span><span>$0.00</span></div>
+        <div class="total"><span>Total:</span><span>$3,760.00</span></div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- FOOTER SECTION -->
+  <section class="promo">
+    <div class="promo-left">
+      <h2>GET IN TOUCH<br>WITH MONTI SHOP</h2>
+      <p>Contact us and our managers will be happy to answer all your questions</p>
+    </div>
+    <div class="promo-right">
+      <h1>CREATE YOUR<br>OWN UNIQUE<br>LOOK</h1>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>
+      <h4>Monti shop</h4>
+      <p>Terms & Conditions<br>Privacy Policy</p>
+    </div>
+
+    <div>
+      <h4>NAVIGATION</h4>
+      <p>MEN<br>WOMEN<br>LOOKBOOK<br>ABOUT</p>
+    </div>
+
+    <div>
+      <h4>INFO</h4>
+      <p>ACCOUNT<br>HELP CENTER<br>SHIPPING & PAYMENTS<br>CONTACTS</p>
+    </div>
+
+    <div>
+      <h4>NEWSLETTER</h4>
+      <input type="email" placeholder="EMAIL">
+    </div>
+  </footer>
+
+</body>
+</html>

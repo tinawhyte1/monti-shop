@@ -1,43 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Great+Vibes&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
-  
+
   <header class="header">
     <div class="logo">MONTI shop</div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Products</a>
-      <a href="#">Contact</a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt=""></a>
-      <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt=""></a>
-    </nav>
-  </header>
-  
-  <section class="hero">
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-    <div class="hero-text">
-      <h1>Sale 20% Off<br><span>On Everything</span></h1>
-      <p>
-        Upgrade your wardrobe with premium styles at prices you'll love.
-       Timeless fits, bold pieces — now 20% off for a limited time.
-      </p>
-      <button class="hero-btn">Shop Now</button>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
     </div>
-      <img src="images/tees.jpeg" class="hero-img" alt="model" />
+    <div class="header-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt="cart"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt="search"></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="container hero">
+    <div class="hero-text">
+      <h1>MONTI<br>FASHION</h1>
+      <p>Discover fashion accessories that make your style stand out. Modern outfits designed for confidence.</p>
+      <div class="hero-buttons">
+        <button class="btn-dark"><a href="cart.html">Buy Product</a></button>
+        <button class="btn-light"><a href="products.html">Explore Product</a></button>
+      </div>
+    </div>
+    <img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070?q=80&w=1200&auto=format&fit=crop"
+      alt="fashion">
+  </section>
+
+  <div class="strip">★ MONTI FASHION ★ MONTI FASHION ★ MONTI FASHION ★</div>
+
+  <!-- COLLECTION -->
+  <section class="container collection">
+    <h2>OUR COLLECTION</h2>
+
+    <div class="filters">
+      <button class="active">Hoodie</button>
+      <button>Caps & Bags</button>
+      <button>Trending</button>
+      <button>Out Wear</button>
+      <button>Accessories</button>
+    </div>
+
+    <div class="products2">
+      <div class="product2">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=600">
+        <h4>Men BLVCK Only Hoodie</h4>
+        <p>$180</p>
+        <button><a href="cart.html">Buy Now</a></button>
+      </div>
+
+      <div class="product2">
+        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=600">
+        <h4>Urban Limited Hoodie</h4>
+        <p>$250</p>
+         <button><a href="cart.html">Buy Now</a></button>
+      </div>
+
+      <div class="product2">
+        <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=600">
+        <h4>Street Graphic Hoodie</h4>
+        <p>$100</p>
+        <button><a href="cart.html">Buy Now</a></button>
+      </div>
+
+      <div class="product2">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=600">
+        <h4>Hip Hop Street Hoodie</h4>
+        <p>$120</p>
+        <button><a href="cart.html">Buy Now</a></button>
+      </div>
+
     </div>
   </section>
 
+
+  <section class="products">
+    <h2>Our <span>products</span></h2>
+
+    <div class="product-grid">
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/men.jpg" loading="lazy" alt="Men Shirt">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">2pcs casual men outfit</p>
+        <span class="price">$75</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/2pcs men's solid casual outfit.jpg" loading="lazy" alt="Men Shirt">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Men's outfit</p>
+        <span class="price">$80</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/long sleeve top for women.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Long sleeve top for women</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/shoe 2.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Women's Shoe</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/shoe 4.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Men's Shoe</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/bag 3.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Women's Bag</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/bag.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Women's Bag</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/shoe 5.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Men's Shoe</p>
+        <span class="price">$68</span>
+      </div>
+
+      <div class="product-card">
+        <div class="img-box">
+          <img src="images/shoes 6.jpg" loading="lazy" alt="Dress">
+          <button class="cart-btn">Add to Cart</button>
+        </div>
+        <p class="title">Men's Shoe</p>
+        <span class="price">$68</span>
+      </div>
+    </div>
+
+    <button class="view-all shopLink"><a href="products.html">View All Products</a></button>
+  </section>
   <section class="whyShop">
     <h1>Why Shop With Us</h1>
     <div class="features">
@@ -62,112 +204,109 @@
   </section>
 
   <section class="hero-2">
-      <img src="images/tees2.jpeg" class="hero2-img" alt="model" />
+    <img src="images/tees2.jpeg" class="hero2-img" alt="model" />
     <div class="hero2-text">
       <h1>#NewArrivals</h1>
       <p>
-        Fresh styles just dropped. Discover our newest arrivals — designed for comfort, 
+        Fresh styles just dropped. Discover our newest arrivals — designed for comfort,
         confidence, and standout style.
-        From casual essentials to statement pieces, 
+        From casual essentials to statement pieces,
         our latest drops are made to fit your style and your vibe.
       </p>
-      <button class="hero2-btn">Shop Now</button>
+      <button class="hero2-btn shopLink"><a href="products.html">Shop Now</a></button>
     </div>
   </section>
-  
-  
-  <section class="products">
-    <h2>Our <span>products</span></h2>
 
-    <div class="product-grid">
-      <!-- CARD -->
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/men.jpg" alt="Men Shirt">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">2pcs casual men outfit</p>
-        <span class="price">$75</span>
+
+  <!-- SUBSCRIBE SECTION -->
+  <section class="subscribe">
+    <h2>Subscribe To Get Discount Offers</h2>
+    <p>Elevate your style with Monti Shop exclusives.</p>
+
+    <form class="subscribe-form">
+      <input type="email" placeholder="Enter Your Email">
+      <button type="submit">SUBSCRIBE</button>
+    </form>
+  </section>
+
+  <!-- TESTIMONIAL SECTION -->
+  <section class="testimonial">
+    <h2>Customer's Testimonial</h2>
+    <span class="line"></span>
+
+    <div class="testimonial-box">
+      <button class="nav-btn">&#10094;</button>
+
+      <div class="profile">
+        <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg" alt="Customer">
+        <h3>MONICA EHONWA</h3>
+        <small>Customer</small>
+        <p>
+          I am absolutely impressed with the quality of this brand.
+          The fabric feels luxurious, the stitching is flawless, and
+          the fit is incredibly flattering. You can truly see the attention
+          to detail in every piece. I’ve received so many compliments,
+          and I’ll definitely be shopping here again!
+        </p>
       </div>
 
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/2pcs men's solid casual outfit.jpg" alt="Men Shirt">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Men's outfit</p>
-        <span class="price">$80</span>
+      <button class="nav-btn">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+
+      <div class="footer-box">
+        <h3 class="logo second">MONTI shop</h3>
+        <p><strong>ADDRESS:</strong> 28 White tower Street, NIGERIA</p>
+        <p><strong>TELEPHONE:</strong> +234 987 654 3210</p>
+        <p><strong>EMAIL:</strong> monicaehonwa@gmail.com</p>
       </div>
 
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/long sleeve top for women.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Long sleeve top for women</p>
-        <span class="price">$68</span>
-      </div>
-      
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/shoe 2.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Women's Shoe</p>
-        <span class="price">$68</span>
-      </div> 
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/shoe 4.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Men's Shoe</p>
-        <span class="price">$68</span>
+      <div class="footer-box">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
 
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/bag 3.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Women's Bag</p>
-        <span class="price">$68</span>
+      <div class="footer-box">
+        <h4>ACCOUNT</h4>
+        <ul>
+          <li><a href="account.html">Account</a></li>
+          <li><a href="checkout.html"> Checkout</a></li>
+          <li><a href="signin.html">Login</a></li>
+          <li><a href="signup.html">Register</a></li>
+          <li><a href="products.html">Shopping</a></li>
+
+        </ul>
       </div>
 
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/bag.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
+      <div class="footer-box">
+        <h4>NEWS LETTER</h4>
+        <p>Subscribe by our newsletter and get update protidin.</p>
+        <div class="newsletter">
+          <input type="email" placeholder="Enter Your Mail">
+          <button>Subscribe</button>
         </div>
-        <p class="title">Women's Bag</p>
-        <span class="price">$68</span>
       </div>
 
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/shoe 5.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Men's Shoe</p>
-        <span class="price">$68</span>
-      </div>
-
-      <div class="product-card">
-        <div class="img-box">
-          <img src="images/shoes 6.jpg" alt="Dress">
-          <button class="cart-btn">Add to Cart</button>
-        </div>
-        <p class="title">Men's Shoe</p>
-        <span class="price">$68</span>
-      </div>
     </div>
 
-    <button class="view-all">View All Products</button>
-  </section>
+    <div class="copyright">
+      © 2026 All Rights Reserved By Montishop
+    </div>
+  </footer>
+
 
 
   <script src="script.js"></script>
 </body>
+
 </html>
-  

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Testimonials</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background: radial-gradient(circle at 20% 0%, #1f2937, #0f172a 60%);
+    color:#fff;
+}
+
+.wrapper{
+    width:1200px;
+    margin:auto;
+    padding:100px 0;
+}
+
+/* SECTION TITLES */
+.badge{
+    background:#1e293b;
+    padding:6px 14px;
+    font-size:12px;
+    border-radius:20px;
+    display:inline-block;
+    margin-bottom:20px;
+    color:#94a3b8;
+}
+
+h1{
+    font-size:42px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+
+.sub{
+    color:#94a3b8;
+    margin-bottom:60px;
+}
+
+/* TESTIMONIAL GRID */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    padding:25px;
+    border-radius:16px;
+    border:1px solid rgba(255,255,255,0.05);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#2563eb;
+}
+
+.stars{
+    color:#fbbf24;
+    margin-bottom:15px;
+}
+
+.card p{
+    color:#cbd5e1;
+    font-size:14px;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+.user{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.user img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+
+.user h4{
+    font-size:14px;
+}
+
+.user span{
+    font-size:12px;
+    color:#94a3b8;
+}
+
+/* FAQ */
+.faq{
+    margin-top:140px;
+    display:flex;
+    justify-content:space-between;
+    gap:80px;
+}
+
+.faq-left{
+    width:40%;
+}
+
+.faq-left h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.faq-left p{
+    color:#94a3b8;
+    margin-bottom:20px;
+}
+
+.faq-right{
+    width:60%;
+}
+
+.faq-item{
+    background:#111827;
+    padding:18px 20px;
+    border-radius:12px;
+    margin-bottom:15px;
+    border:1px solid rgba(255,255,255,0.05);
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.faq-item:hover{
+    border-color:#2563eb;
+}
+
+/* CTA */
+.cta{
+    margin-top:140px;
+    text-align:center;
+    padding:80px 20px;
+    border-radius:24px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.cta h2{
+    font-size:36px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    color:#94a3b8;
+    margin-bottom:30px;
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.btn-secondary{
+    background:#1e293b;
+    border:1px solid rgba(255,255,255,0.1);
+    color:#fff;
+    padding:14px 28px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.btn-primary:hover{
+    background:#1d4ed8;
+}
+
+.btn-secondary:hover{
+    border-color:#2563eb;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+    .wrapper{
+        width:90%;
+    }
+
+    .grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .faq{
+        flex-direction:column;
+    }
+
+    .faq-left,
+    .faq-right{
+        width:100%;
+    }
+}
+
+@media(max-width:600px){
+    .grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+<header class="header">
+    <div class="logo">MONTI shop</div>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+    <div class="header-nav">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html"><img src="https://cdn-icons-png.flaticon.com/128/18996/18996272.png" alt="cart"></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/19026/19026023.png" alt="search"></a>
+      </nav>
+    </div>
+  </header>
+
+<div class="wrapper">
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <span class="badge">Testimonials</span>
+        <h1>What Our Customers Say</h1>
+        <p class="sub">Hear from our incredible stylish customers.</p>
+
+        <div class="grid">
+
+            
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    Absolutely love this brand! The quality and style are unmatched 🔥
+                </p>
+                <div class="user">
+                    <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    Everything here screams elegance 😍 Definitely shopping again!
+                </p>
+                <div class="user">
+                  <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    So impressed with the designs and fast delivery. 10/10!
+                </p>
+                <div class="user">
+                 <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                   I ordered and the quality exceeded my expectations! Highly recommend.
+                </p>
+                <div class="user">
+                   <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                    Exactly as pictured. So classy and comfortable.
+                </p>
+                <div class="user">
+                   <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="stars">★★★★★</div>
+                <p>
+                   “Affordable but looks luxury. Love it!
+                </p>
+                <div class="user">
+                    <img src="images/WhatsApp Image 2026-02-06 at 5.15.20 PM.jpeg">
+                    <div>
+                        <h4>Ehonwa Monica</h4>
+                        <span>Fashion Designer</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- FAQ SECTION -->
+    <section class="faq">
+        <div class="faq-left">
+            <span class="badge">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>If you have any other questions, please email us.</p>
+            <button class="btn-secondary">Contact us</button>
+        </div>
+
+        <div class="faq-right">
+            <div class="faq-item">+ What sizes do you offer?</div>
+            <div class="faq-item">+ How do I choose the right size?</div>
+            <div class="faq-item">+ How long does delivery take?</div>
+            <div class="faq-item">+ Do you offer nationwide delivery?</div>
+            <div class="faq-item">+ What payment methods do you accept?</div>
+        </div>
+    </section>
+
+
+    
+    <section class="cta">
+        <h2>Wear the trend. Be the statement.</h2>
+        <p>
+            New arrivals just dropped. Shop now. Limited stock. Unlimited style.
+        </p>
+
+        <div class="cta-buttons">
+            <button class="btn-primary">Get it now →</button>
+            <button class="btn-secondary">Learn more</button>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
